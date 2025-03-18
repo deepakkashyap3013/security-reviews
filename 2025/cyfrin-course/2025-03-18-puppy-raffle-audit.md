@@ -478,7 +478,7 @@ But the potential gas saved isn't worth it if we have to recast and this bug exi
 ```
 
 
-### [M-2] If all users requests a refund and raffle duration ends, `PuppyRaffle::selectWinner()` will always revert
+### [M-3] If all users requests a refund and raffle duration ends, `PuppyRaffle::selectWinner()` will always revert
 
 **<ins>Description:</ins>** 
 - If all participants requests refund and the raffle duration has elapsed, the calling `selectWinner()` function will always revert because of the attempt to send the `prizePool` funds to `address(0)` and mint the NFT to the zero-address.
